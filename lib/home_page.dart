@@ -28,13 +28,8 @@ class HomepageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('Contador: $counter'),
-            Container(
-              height: 10,
-            ),
+            Container(height: 10),
             CustomSwitch(),
-            Container(
-              height: 50,
-            ),
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
