@@ -49,8 +49,7 @@ class _LoginPageState extends State<LoginPage> {
               RaisedButton(
                   onPressed: () {
                     if (email == 'danilo@test.com' && password == 'test#123') {
-                      Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.of(context).pushNamed('/home');
                     } else {
                       print('falha na autenticação');
                     }
