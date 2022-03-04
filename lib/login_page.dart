@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -48,7 +49,8 @@ class _LoginPageState extends State<LoginPage> {
               RaisedButton(
                   onPressed: () {
                     if (email == 'danilo@test.com' && password == 'test#123') {
-                      print('user autenticado com sucesso');
+                      Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(builder: (context) => HomePage()));
                     } else {
                       print('falha na autenticação');
                     }
