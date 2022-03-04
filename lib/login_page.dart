@@ -24,6 +24,13 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Container(
+                width: 300,
+                height: 300,
+                child: Image.network(
+                    'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Logo_TV_2015.png/250px-Logo_TV_2015.png'),
+              ),
+              Container(height: 20),
               TextField(
                 onChanged: (text) {
                   email = text;
@@ -49,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
               RaisedButton(
                   onPressed: () {
                     if (email == 'danilo@test.com' && password == 'test#123') {
-                      Navigator.of(context).pushNamed('/home');
+                      Navigator.of(context).pushReplacementNamed('/home');
                     } else {
                       print('falha na autenticação');
                     }
