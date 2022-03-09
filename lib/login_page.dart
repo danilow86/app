@@ -36,7 +36,8 @@ class _LoginPageState extends State<LoginPage> {
                   Container(height: 20),
                   Card(
                       child: Padding(
-                    padding: const EdgeInsets.all(12.0),
+                    padding: const EdgeInsets.only(
+                        left: 12, right: 12, top: 20, bottom: 12),
                     child: Column(children: [
                       TextField(
                         onChanged: (text) {
@@ -60,20 +61,25 @@ class _LoginPageState extends State<LoginPage> {
                           border: OutlineInputBorder(),
                         ),
                       ),
+                      SizedBox(height: 15),
+                      ElevatedButton(
+                        onPressed: () {
+                          if (email == 'danilo@test.com' &&
+                              password == 'test#123') {
+                            Navigator.of(context).pushReplacementNamed('/home');
+                          } else {
+                            print('falha na autenticação');
+                          }
+                        },
+                        child: Container(
+                            width: double.infinity,
+                            child: Text(
+                              'Entrar',
+                              textAlign: TextAlign.center,
+                            )),
+                      )
                     ]),
                   )),
-                  SizedBox(height: 15),
-                  ElevatedButton(
-                    onPressed: () {
-                      if (email == 'danilo@test.com' &&
-                          password == 'test#123') {
-                        Navigator.of(context).pushReplacementNamed('/home');
-                      } else {
-                        print('falha na autenticação');
-                      }
-                    },
-                    child: Text('Entrar'),
-                  )
                 ],
               ),
             ),
