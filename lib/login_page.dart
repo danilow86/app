@@ -3,7 +3,7 @@
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:myapp/home_page.dart';
+//import 'package:myapp/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -28,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 300,
                     height: 300,
                     child: Image.asset('assets/images/Logo.png'),
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                             print('falha na autenticação');
                           }
                         },
-                        child: Container(
+                        child: SizedBox(
                             width: double.infinity,
                             child: Text(
                               'Entrar',

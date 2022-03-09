@@ -4,5 +4,5 @@ import 'app_widget.dart';
 
 //Widgets == Classes
 main() {
-  runApp(AppWidget());
+  runApp(const AppWidget());
 }

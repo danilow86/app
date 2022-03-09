@@ -4,6 +4,8 @@ import 'package:myapp/home_page.dart';
 import 'package:myapp/login_page.dart';
 
 class AppWidget extends StatelessWidget {
+  const AppWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
@@ -18,8 +20,8 @@ class AppWidget extends StatelessWidget {
             ),
             initialRoute: '/',
             routes: {
-              '/': (context) => LoginPage(),
-              '/home': (context) => HomePage(),
+              '/': (context) => const LoginPage(),
+              '/home': (context) => const HomePage(),
             });
       },
     );
