@@ -33,6 +33,7 @@ class HomepageState extends State<HomePage> {
               title: const Text('Inicio'),
               subtitle: const Text('Tela de Inicio'),
               onTap: () {
+                // ignore: avoid_print
                 print('home');
               },
             ),
